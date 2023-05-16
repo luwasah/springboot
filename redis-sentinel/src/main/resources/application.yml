@@ -1,0 +1,12 @@
+server:
+  port: 8082
+
+# redis-sentinel连接配置
+spring:
+  redis:
+    sentinel:
+      master: mymaster
+      nodes:
+        - 192.168.100.100:27001
+        - 192.168.100.100:27002
+        - 192.168.100.100:27003

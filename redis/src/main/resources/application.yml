@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: springdata-redis
+ ## Redis相关配置
+  redis:
+    host: 192.168.100.100
+    port: 6379
+    password: 123456  # redis连接密码,在redis.conf中配置
+    database: 0       # 指定使用Redis的哪个数据库，Redis服务启动后默认有16个数据库，编号分别是从0到15。可以通过修改Redis配置文件来指定数据库的数量。
+    jedis:
+      pool:
+        max-active: 8   # 最大连接数
+        max-wait: 1ms   # 连接池最大阻塞等待时间
+        max-idle: 4     # 连接池中的最大空闲连接
+        min-idle: 0     # 连接池中嘚最小空闲连接
